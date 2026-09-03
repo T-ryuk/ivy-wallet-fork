@@ -237,40 +237,7 @@ private fun BoxWithConstraintsScope.UI(
 //            Premium()
         }
 
-        item {
-            SettingsSectionDivider(text = stringResource(R.string.import_export))
-
-            Spacer(Modifier.height(16.dp))
-
-            val nav = navigation()
-            ExportCSV {
-                onExportToCSV()
-            }
-
-            Spacer(Modifier.height(12.dp))
-
-            SettingsDefaultButton(
-                icon = R.drawable.ic_vue_security_shield,
-                text = stringResource(R.string.backup_data),
-                iconPadding = 8.dp
-            ) {
-                onBackupData()
-            }
-
-            Spacer(Modifier.height(12.dp))
-
-            SettingsPrimaryButton(
-                icon = R.drawable.ic_export_csv,
-                text = stringResource(R.string.import_data),
-                backgroundGradient = GradientGreen
-            ) {
-                nav.navigateTo(
-                    ImportScreen(
-                        launchedFromOnboarding = false
-                    )
-                )
-            }
-        }
+        
 
         item {
             SettingsSectionDivider(text = stringResource(R.string.app_settings))
@@ -319,14 +286,7 @@ private fun BoxWithConstraintsScope.UI(
                 Spacer(Modifier.height(12.dp))
             }
 
-            SettingsDefaultButton(
-                icon = R.drawable.ic_currency,
-                text = stringResource(R.string.exchange_rates),
-            ) {
-                nav.navigateTo(ExchangeRatesScreen)
-            }
-
-            Spacer(Modifier.height(12.dp))
+    
 
             AppSwitch(
                 lockApp = lockApp,
