@@ -258,9 +258,6 @@ private fun ColumnScope.Content(
         onBufferClick = onBufferClick
     )
 
-    Spacer(Modifier.height(16.dp))
-
-    OpenSource()
 
     Spacer(Modifier.weight(1f))
 }
